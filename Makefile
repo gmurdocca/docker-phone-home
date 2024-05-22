@@ -8,11 +8,8 @@ help: # Show this help
 	  sed -e 's/# //; s/^/    /' | \
 	  column -s: -t
 
-build: # Build OMSRE docker image
+build: # Build docker image
 	docker build -f Dockerfile . -t $(docker_image_name)
-
-publish: # Publish docker image
-	docker push $(docker_image_name):latest
 
 shell: # exec into container to bash shell
 	docker run --entrypoint="" -it $(docker_image_name):latest bash
