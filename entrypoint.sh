@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Reverse tunnel to access container shell from EC2 bastion for debugging if $PHONE_HOME is set and
+# Reverse tunnel to access container shell from bastion for debugging if $PHONE_HOME is set and
 # is in the format: <bastion_address>:<port>
 if [ -n "${PHONE_HOME}" ]; then
 
