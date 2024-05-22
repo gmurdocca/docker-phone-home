@@ -4,7 +4,7 @@ docker_image_name = "socat_remote_shell"
 
 help: # Show this help
 	@echo Make targets:
-	@egrep -h ":\s+# " $(MAKEFILE_LIST) | \
+	@grep -Eh ":\s+# " $(MAKEFILE_LIST) | \
 	  sed -e 's/# //; s/^/    /' | \
 	  column -s: -t
 
